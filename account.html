@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Book Store -account</title>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="account.css">
+
+
+
+	</head>
+	<body>
+		<header>
+			<img class="logo" src="images/logo.png " alt="logo">
+			<nav>
+				<ul class="nav_links">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="product.html">SHOP</a></li>
+					<li><a href="My Cart.html">MY CART</a></li>
+					<li><a href="account.html">ACCOUNT</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="body">
+			<hr>
+			<div class="wrapper">
+				<div class="title-text">
+				   <div class="title login">
+					  Login Form
+				   </div>
+				   <div class="title signup">
+					  Signup Form
+				   </div>
+				</div>
+				<div class="form-container">
+				   <div class="slide-controls">
+					  <input type="radio" name="slide" id="login" checked>
+					  <input type="radio" name="slide" id="signup">
+					  <label for="login" class="slide login">Login</label>
+					  <label for="signup" class="slide signup">Signup</label>
+					  <div class="slider-tab"></div>
+				   </div>
+				   <div class="form-inner">
+					  <form action="#" class="login">
+						 <div class="field">
+							<input type="text" placeholder="Email Address" required>
+						 </div>
+						 <div class="field">
+							<input type="password" placeholder="Password" required>
+						 </div>
+						 <div class="pass-link">
+							<a href="#">Forgot password?</a>
+						 </div>
+						 <div class="field btn">
+							<div class="btn-layer"></div>
+							<input type="submit" value="Login">
+						 </div>
+						 <div class="signup-link">
+							Not a member? <a href="">Signup now</a>
+						 </div>
+					  </form>
+					  <form action="#" class="signup">
+						 <div class="field">
+							<input type="text" placeholder="Email Address" required>
+						 </div>
+						 <div class="field">
+							<input type="password" placeholder="Password" required>
+						 </div>
+						 <div class="field">
+							<input type="password" placeholder="Confirm password" required>
+						 </div>
+						 <div class="field btn">
+							<div class="btn-layer"></div>
+							<input type="submit" value="Signup">
+						 </div>
+					  </form>
+				   </div>
+				</div>
+			 </div>
+			 <script>
+				const loginText = document.querySelector(".title-text .login");
+				const loginForm = document.querySelector("form.login");
+				const loginBtn = document.querySelector("label.login");
+				const signupBtn = document.querySelector("label.signup");
+				const signupLink = document.querySelector("form .signup-link a");
+				signupBtn.onclick = (()=>{
+				  loginForm.style.marginLeft = "-50%";
+				  loginText.style.marginLeft = "-50%";
+				});
+				loginBtn.onclick = (()=>{
+				  loginForm.style.marginLeft = "0%";
+				  loginText.style.marginLeft = "0%";
+				});
+				signupLink.onclick = (()=>{
+				  signupBtn.click();
+				  return false;
+				});
+			 </script>
+		</section>
+        
+		 </body>
+	</html>
